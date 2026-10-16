@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C: debug current file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [
+        { "name": "PATH", "value": "C:\\msys64\\ucrt64\\bin;${env:PATH}" }
+      ],
+      // externalConsole: true 会为程序弹出一个真正的控制台窗口，好处有两个：
+      //   1) 你可以用键盘给程序输入，scanf 能读到（设成 false 时输入接在调试器
+      //      管道上，scanf 读不到，程序会走到"输入无效"分支）
+      //   2) 那个窗口是 936 代码页，GBK 的中文显示正常（设成 false 时输出按
+      //      UTF-8 解码，GBK 的中文会乱码）
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "preLaunchTask": "C: build current file"
+    }
+  ]
+}

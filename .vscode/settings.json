@@ -1,0 +1,10 @@
+{
+  // 让 Code Runner 的运行按钮也走同一个 gcc 转发器，
+  // 否则它会绕开 .vscode/tasks.json，编出 UTF-8 的 exe（在 936 控制台下乱码）
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": false,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMap": {
+    "c": "cd $dir; & 'D:\\runbank\\tools\\gcc-gbk.exe' -g $fileName -o $fileNameWithoutExt.exe; & '$dir$fileNameWithoutExt.exe'"
+  }
+}

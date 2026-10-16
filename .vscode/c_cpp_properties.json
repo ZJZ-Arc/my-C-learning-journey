@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      // 指向 gcc 转发器：它会自动补上 -finput-charset=UTF-8 -fexec-charset=GBK -static，
+      // 这样 VS Code 里任何编译按钮（cpptools / cpp-devtools 的 ▶、任务、Code Runner）
+      // 编出来的 exe 都是 GBK，双击运行时中文不会乱码。
+      "compilerPath": "D:/runbank/tools/gcc-gbk.exe",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "C:/msys64/ucrt64/include/**",
+        "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/**",
+        "C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include-fixed/**"
+      ],
+      "intelliSenseMode": "windows-gcc-x64",
+      "cStandard": "c17"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,13 @@
+# 编译产物：不要提交（二进制文件，每台机器都能重新生成）
+*.exe
+*.o
+*.obj
+*.out
+*.dll
+*.a
+
+# 编辑器 / 系统杂项
+*.code-workspace
+.vs/
+Thumbs.db
+desktop.ini
